@@ -1,0 +1,3 @@
+Comando para montar el servidor:
+
+mount -t nfs 172.24.5.2:/mnt/pp_nfs /mnt/pp_nfs
