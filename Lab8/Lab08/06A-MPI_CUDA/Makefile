@@ -6,7 +6,7 @@
 # Sample Makefile
 #
 
-PROGRAMS 	= MPI_CUDA_dotp
+PROGRAMS 	= MPI_CUDA_dotp dotp
 
 #
 # Targets, in order of appearance
@@ -24,6 +24,9 @@ dotp.o: dotp.c
 
 dotp_krnl.o: dotp_krnl.cu
 	nvcc -c dotp_krnl.cu
+
+run:
+	@echo "Will run $(PROGRAM) using $(PROCS) processes:"; mpiexec -n 2 $(PROGRAM)
 
 #
 # Other nice thingys
